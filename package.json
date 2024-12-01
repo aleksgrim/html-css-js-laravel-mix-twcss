@@ -1,0 +1,20 @@
+{
+  "name": "gsap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npx mix watch\" \"npx tailwindcss -i ./src/styles/styles.css -o ./dist/styles/styles.min.css --watch --minify\" ",
+    "build": "concurrently \"npx mix\" \"npx tailwindcss -i ./src/styles/styles.css -o ./dist/styles/styles.min.css --minify\" ",
+    "prod": "concurrently \"npx mix --production\" \"npx tailwindcss -i ./src/styles/styles.css -o ./dist/styles/styles.min.css --minify\" "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "tailwindcss": "^3.4.15",
+    "laravel-mix": "^6.0.49",
+    "resolve-url-loader": "^5.0.0"
+  }
+}
